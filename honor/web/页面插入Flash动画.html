@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>页面插入Flash动画</title>
+</head>
+
+<body>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="240" height="85">
+    <param name="movie" value="../../images/zi.swf">  <!-- flash动画的路径和name -->
+    <param name="quality" value="high">
+    <embed src="../../images/zi.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="240" height="85">
+  </object>
+</body>
+
+</html>
+ <!-- 备注：
+  1、classid 属性
+　　值: classid:D27cdb6e-ae6d-11cf-96b8-444553540000
+　　说明: 标识浏览器的 ActiveX 控件。输入的值必须与上面的显示完全一致。仅适用于 object。
+
+  2、codebase 属性
+　　值: active.macromedia.com/flash7/cabs/swflash.cab#version=7,0,0,0
+　　说明: 标识 Flash Player ActiveX 控件的位置，以便在尚未安装该控件时，浏览器可以自动下载它。输入的值必须与上面的显示完全一致。仅适用于 object。
+
+  3、pluginspage 属性
+　　值: www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash
+　　说明: 标识 Flash Player 插件的位置，以便在尚未安装该插件时，用户可以下载它。输入的值必须与上面的显示完全一致。仅适用于 embed 。
+
+  4、width和height为flash显示的窗口大小。
+
+  5、quality 属性/参数
+　　值: low | medium | high | autolow | autohigh | best
+　　模板变量：$QU
+　　说明: （可选）指定在应用程序回放期间使用的消除锯齿级别。因为消除锯齿需要更快的处理器先对 SWF 文件的每一帧进行平滑处理，然后再将它们呈现到观众屏幕上，所以需要根据要优化速度还是优化外观来选择一个值：
+　　“Low”使回放速度优先于外观，而且从不使用消除锯齿功能。
+　　“Autolow”优先考虑速度，但是也会尽可能改善外观。回放开始时，消除锯齿功能处于关闭状态。如果 Flash Player 检测到处理器可以处理消除锯齿功能，就会打开该功能。
+　　“Autohigh”在开始时是回放速度和外观两者并重，但在必要时会牺牲外观来保证回放速度。回放开始时，消除锯齿功能处于打开状态。如果实际帧 频降到指定帧频之下，就会关闭消除锯齿功能以提高回放速度。使用此设置可模拟 Flash 中的“消除锯齿”命令（“查看”>“预览模式”>“消除锯齿”）。
+　　“Medium”会应用一些消除锯齿功能，但并不会平滑位图。该设置生成的图像品质要高于“Low”设置生成的图像品质，但低于“High”设置生成的图像品质。
+　　“High”使外观优先于回放速度，它始终应用消除锯齿功能。如果 SWF 文件不包含动画，则会对位图进行平滑处理；如果 SWF 文件包含动画，则不会对位图进行平滑处理。
+　　“Best”提供最佳的显示品质，而不考虑回放速度。对所有输出都进行消除锯齿处理，并且对所有位图都进行平滑处理。
+　　如果忽略 quality 属性，其默认值为 high。
+
+
+  -->
+
+<!-- 方案案例 -->
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面插入flash动画案例</title>
+    <style>
+      .top {
+        width: 960px;
+        height: 206px;
+        margin: 0px auto;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="top">
+      <!-- 注意要设置包裹flash动画盒子的宽高度 -->
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="960"
+        height="206">
+        <param name="movie" value="/ztzl/lxyzxxjy/images/lxyz.swf">
+        <param name="quality" value="high">
+        <embed src="(flash文件路径)xxx.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"
+          type="application/x-shockwave-flash" width="960" height="206">
+      </object>
+    </div>
+  </body>
+  
+  </html>

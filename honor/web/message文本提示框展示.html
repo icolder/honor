@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+
+
+
+  <button id="butt">点击一下</button>
+  
+
+  
+  <script>
+    window.onload = function(){
+      var butt = document.getElementById("butt");
+      butt.onclick = function(){
+        var mask = document.createElement("div");
+        var box = document.createElement("div");
+        var boxTop = document.createElement("div");
+        var cha = document.createElement("div");
+        var content = document.createElement("div");
+        var btn = document.createElement("button")
+        mask.style = "height: 100%;width:100%;position:fixed;top:0;right:0;left:0;bottom:0;background-color: rgba(0, 0, 0, .1);z-index:99999;"
+        box.style = "height:140px;width:450px;border:1px solid #ccc;position:absolute;left: 50%;margin-left: -225px;top:50%;margin-top:-70px;overflow: hidden;border-radius: 6px;background-color:#fff";
+        boxTop.style = "height:25px;width:450px;background-color:#4e8cc6;overflow:hidden;font-size:14px;color:#fff;padding-left:6px;line-height:25px;position:relative;user-select: none;";
+        cha.style = "height:25px;width:25px;border:1px solid #ccc;position:absolute;top:0;right:0;margin-top:-1px;margin-right:5px;color:#fff;font-size:20px;text-align: center;line-height: 25px;cursor: pointer;"
+        content.style = "height:75px;width:450px;line-height:75px;padding:10px;box-sizing: border-box;user-select: none;"
+        btn.style = "height:30px;width:70px;background-color:#669df6;position: absolute;bottom: 10px;right:10px;outline: none;border: none;border-radius: 4px;text-align: center;line-height: 30px;color:#fff;user-select: none;";
+        cha.innerHTML = "&times;"
+        btn.innerText = "确定";
+        boxTop.innerText = "提示信息：";
+        content.innerText = "刘洪荣的提示信息展示~";
+        box.appendChild(boxTop)
+        boxTop.appendChild(cha);
+        box.appendChild(content)
+        box.appendChild(btn)
+        mask.appendChild(box)
+        document.body.appendChild(mask)
+        btn.addEventListener('click',function(){
+          mask.style.display = "none"
+        })
+        cha.addEventListener('click',function(){
+          mask.style.display = "none"
+        })
+      }
+    }
+  </script>
+</body>
+</html>

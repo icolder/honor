@@ -1,0 +1,58 @@
+{
+  "id": "1488734",
+  "name": "Vue项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "144131",
+      "name": "arrow",
+      "font_class": "arrow",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "522274",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "2733922",
+      "name": "delete",
+      "font_class": "delete",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    },
+    {
+      "icon_id": "4551252",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "5466014",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e70d",
+      "unicode_decimal": 59149
+    },
+    {
+      "icon_id": "6536706",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "7391189",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    }
+  ]
+}

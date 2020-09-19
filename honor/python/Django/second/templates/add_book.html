@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="" method="post" style="display:block;position: relative;top: 20px;left: 30px">
+        {% csrf_token %}
+        书名：<input type="text" name="name" placeholder="请输入书名"><br>
+        作者：<input type="text" name="author" placeholder="请输入作者"><br>
+              <input type="submit" value="提交" style="position: relative;left: 48px">
+    </form>
+{% endblock %}

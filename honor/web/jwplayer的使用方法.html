@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./jwplayer.js"></script>
+<!-- 以下jwplayer.key为必填项 否则页面会报错：Error setting up player: Invalid license key -->
+  <script type="text/javascript">
+    jwplayer.key = "xDp0ln8T1AyHlwzQ89sGZSaJAy5tEdN1RyZkSQ==";
+    // jwplayer 用户的key，需要在官方用户管理界面得到
+    // 全名：Self-Hosted Player License Key
+  </script>
+</head>
+<body>
+  <div class="video">
+    <div id="video-play"></div>
+  </div>
+
+  <script>
+    $(function(){
+      jwplayer("video_play").setup({
+        // video_play为视频所在盒子的id，不能为class
+        file: '***.mpd', //视频文件地址
+        flashplayer: "//v.dongaocloud.com/jwplayer/player.swf", //需要单独下载引用,不是必须的，没有可以不写
+        width: 780,   //width表示视频显示宽度，height表示现实高度。
+        height: 440,
+        image: '***.png' //该处为视频未播放时候的占位图片
+      });
+      jwplayer("video_play").play(false/true); //暂停或者播放
+    })
+  </script>
+</body>
+</html>

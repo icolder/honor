@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box box1 boxx bonx box2"></div>
+  <div class="box box4"></div>
+  <div class="box"></div>
+  <script>
+    function getclass(classn) {
+      var list = document.getElementsByTagName("*");
+        var temp = [];
+        for(var i = 0; i < list.length; i++) {
+          var nameArray = list[i].className.split(" ");
+          for(var x=0;x<nameArray.length; x++){
+            if(nameArray[x] == classn) {
+              temp.push(list[i])
+            }
+          }
+        }
+      return temp;
+    }
+    alert(getclass("box"))
+  </script>
+</body>
+</html>

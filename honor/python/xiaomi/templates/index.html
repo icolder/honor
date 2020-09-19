@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米论坛</title>
+    <link rel="icon" href="{% static 'front/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {# header部分 #}
+    <div class="header">
+        <div class="wrap990">
+            <div class="nav">
+                <a class="logo" href="javascript: void(0);"></a>
+            </div>
+            <div class="client">
+                <a class="icon-phone" href="javascript: void(0);">客户端</a>
+                <div class="qr-code">
+                    <img src="{% static 'front/qr-code.jpg' %}" alt="">
+                    <h2>扫码下载小米社区APP</h2>
+                </div>
+            </div>
+            <ul class="bar">
+                <li>
+                    <a href="javascript: void(0);">资讯</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">论坛</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">版块</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">酷玩帮</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">摄影馆</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">爆米花</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">同城会</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">小米商城</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">
+                        更多
+                        <span class="icon-caret"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">
+                        <span class="icon-write"></span>
+                    </a>
+                    <a href="javascript: void(0);">
+                        <span class="icon-write2"></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="login-reg">
+                <a class="login" href="javascript: void(0);">登录</a>
+                <span></span>
+                <a class="register" href="javascript: void(0);">注册</a>
+            </div>
+        </div>
+    </div>
+
+
+    {# 中间部分main #}
+    <div class="main">
+        <div class="wrap990 clearfix">
+            {# 左边部分 #}
+            <div class="left">
+                {# 热门板块部分 #}
+                <div class="hot">
+                    <span>热门版块:</span>
+                    <ul class="hot-list">
+                        <li>
+                            <a href="javascript: void(0);"><img src="{% static 'front/hot1.png' %}" alt="">MIUI功能与讨论</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);"><img src="{% static 'front/hot2.png' %}" alt="">软件/游戏/壁纸</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);"><img src="{% static 'front/hot3.jpg' %}" alt="">小米9/9 SE</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);"><img src="{% static 'front/hot4.jpg' %}" alt="">Redmi K20</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);"><img src="{% static 'front/hot5.jpg' %}" alt="">小米CC9/CC9e</a>
+                        </li>
+                    </ul>
+                </div>
+                    {# 文章部分 #}
+                <div class="article">
+                    <div class="article-wrap">
+                        <div class="article-header">
+                            <ul class="article-list">
+                                <li>
+                                    <a class="commend" href="javascript: void(0);">推荐</a>
+                                </li>
+                                <li>
+                                    <a class="new-theme on" href="javascript: void(0);">最新主题</a>
+                                </li>
+                                <li>
+                                    <a class="publish" href="javascript: void(0);">发表新主题</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="article-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# 右边部分 #}
+            <div class="right">
+                <div class="recommend">
+                    <div class="recommend-title">
+                        <span>版块推荐</span>
+                        <span>百宝箱</span>
+                    </div>
+                    <div class="recommend-content">
+                        <ul>
+                            <li>
+                                <a style="color: red" href="javascript:void(0);">小米9/9 SE</a>
+                            </li>
+                            <li>
+                                <a style="color: red" href="javascript:void(0);">小米MIX 3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">小米 8/8 SE/青春版</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">小米Max3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">红米6</a>
+                            </li>
+		   					<li>
+                                <a href="javascript:void(0);" >红米Note 7</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">小米电视</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >小米盒子</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >小米路由器</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >小米笔记本</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >小米手环3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >小米平板4</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >九号平衡车</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" >小米空气净化器</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><a href="javascript: void(0);">论坛任务</a></li>
+                            <li><a href="javascript: void(0);" >搜索</a></li>
+							<li><a href="javascript: void(0);">我的消息</a></li>
+							<li><a href="javascript: void(0);">ROM下载</a></li>
+                            <li><a href="javascript: void(0);">VIP认证</a></li>
+							<li><a href="javascript: void(0);">申请特殊组</a></li>
+							<li><a href="javascript: void(0);">应用中心</a></li>
+							<li><a href="javascript: void(0);">防伪查询</a></li>
+                            <li><a href="javascript: void(0);">小米众测</a></li>
+							<li><a href="javascript: void(0);">问题反馈</a></li>
+							<li><a href="javascript: void(0);">热门软件</a></li>
+							<li><a href="javascript: void(0);">小米大事记</a></li>
+                            <li><a href="javascript: void(0);">小米商城</a></li>
+                            <li><a href="javascript: void(0);">天猫旗舰店</a></li>
+                        </ul>
+                    </div>
+                </div>  {# end recommend #}
+
+                {# start sign签到部分 #}
+                <div class="sign">
+                    <span class="sign-right">签到</span>
+                    <div class="sign-info">
+                        <span class="person">6847人</span>
+                        <span class="rank">签到看排名</span>
+                    </div>
+                    <div class="sign-box">
+                        <img src="{% static 'front/bbs_lite_d_qr.png' %}" width="86px" height="86px">
+                        <h2>扫码下载App</h2>
+                        <span>一键签到 升级加速</span>
+                        <div class="triangle2"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                {# end sign签到部分 #}
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="wrap990">
+            <div class="footer-logo">
+                <img src="{% static 'front/logo_cn.png' %}" alt="">
+            </div>
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.js"></script>
+
+    {# 头像默认懒加载文件引用，项目中暂时没有使用该功能 #}
+    <script src="{% static 'js/jquery.lazyload.js' %}"></script>
+
+    <script src="{% static 'js/index.js' %}"></script>  {# 导入recommend #}
+
+</body>
+</html>

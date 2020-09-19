@@ -1,0 +1,418 @@
+
+/* ResetCSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+    background: #f3f3f3;
+    font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    /*height: 2000px;*/
+}
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.67);
+}
+
+.wrap990 {
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav {
+    height: 50px;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 50px;
+    background-image: url("../front/logo_cn.png");
+    float: left;
+}
+.client {
+    position: absolute;
+    float: right;
+    top: 0;
+    left: 160px;
+    height: 50px;
+}
+.client a {
+    display: block;
+    width: 60px;
+    color: #ff8b3d;
+    line-height: 50px;
+    background: url("../front/header_mobile.png") 0 center no-repeat;
+    padding-left: 14px;
+}
+.qr-code {
+    display: none;
+    position: absolute;
+    width: 183px;
+    padding-top: 19px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    z-index: 9;
+}
+.qr-code h2 {
+    color: #454545;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 4px;
+}
+.client:hover .qr-code{
+    display: block;
+}
+
+.bar {
+    overflow: hidden;
+    position: absolute;
+    left: 240px;
+    top: 0;
+}
+.bar li {
+    float: left;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 0 8px;
+}
+.bar li a {
+    color: #fff;
+}
+.bar li a:hover {
+    color: #ff8b3d;
+}
+.icon-caret {
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+}
+.icon-write {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-right: 5px;
+    margin-bottom: -4px;
+    vertical-align: center;
+    background-image: url("../front/header_icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 -31px;
+    cursor: pointer;
+}
+.icon-write2 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-bottom: -2px;
+    vertical-align: center;
+    background-image: url("../front/header_icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 -13px;
+    cursor: pointer;
+}
+
+.login-reg {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #fff;
+}
+.login-reg span {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin:0 1px -2px 4px;
+    border-left: 1px solid #fff;
+}
+.login-reg a {
+    color: #fff;
+}
+
+/* main-body*/
+.main {
+    margin: 10px;
+}
+
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    width: 730px;
+    float: left;
+}
+.hot {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+}
+.hot span {
+    display: block;
+    line-height: 58px;
+    margin-left: 20px;
+    float: left;
+    font-size: 12px;
+}
+.hot-list li {
+    float: left;
+    margin-left: 15px;
+    margin-right: 1px;
+    line-height: 58px;
+    font-size: 12px;
+}
+.hot-list li img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.hot-list a:hover {
+    color: #ff8b3d;
+}
+/* article */
+.article {
+    margin-top: 10px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+    height: 1700px;
+}
+.article-wrap {
+    padding: 20px 30px;
+    position: absolute;
+}
+.article-header {
+    width: 668px;
+}
+.article-list li a {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-right: 4px;
+}
+.article-list .on {
+    background: #f3f3f3;
+}
+.article-list li .publish {
+    float: right;
+    width: 98px;
+    height: 32px;
+    background: #ff8b3d;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    font-size: 12px;
+    margin-right: 0;
+}
+
+/* recommend */
+.right {
+    float: right;
+    width:250px;
+    height: 1700px;
+    background: pink;
+}
+.recommend {
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+.recommend-title {
+    width: 252px;
+    margin-left: -1px;
+}
+.recommend-title span {
+    float: left;
+    width: 125px;
+    border-left: 1px solid #e5e5e5;
+    height: 36px;
+    line-height: 32px;
+    border-top: 4px solid #ccd1d9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    background: #fafafa;
+    border-top-color: #fafafa;
+    cursor: pointer;
+}
+.recommend-title span.on {
+    border-top-color: #ccd1d9;
+    background: #fff;
+}
+.recommend-content ul {
+    width: 252px;
+    margin-left: -1px;
+}
+.recommend-content ul li {
+    height: 36px;
+    line-height: 36px;
+    width: 125px;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #e5e5e5;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+}
+.recommend-content ul li a {
+    display: block;
+}
+.recommend-content ul li a:hover {
+    color: #ff8b3d;
+}
+
+/* sign */
+.sign {
+    width: 249px;
+    margin: 15px 0 10px;
+    background-color: #ff6f3d;
+    height: 50px;
+    color: #fff;
+    background-image: url("../front/tou.png");
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    cursor: pointer;
+    position: relative;
+}
+.sign-right {
+    font-size: 24px;
+    line-height: 52px;
+    margin-left: 54px;
+}
+.sign-info {
+    float: right;
+    width: 111px;
+    height: 46px;
+    margin-right: 2px;
+    margin-top: 2px;
+    padding: 0 5px;
+    background-color: #fff;
+    color: #606060;
+    overflow: hidden;
+}
+.person {
+    display: inline-block;
+    height: 23px;
+    width: 111px;
+    border-bottom: 1px solid #e5e5e5;
+    background-image: url("../front/tou2.jpg");
+    background-position: 5px 0;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 26px;
+}
+.rank {
+    display: inline-block;
+    height: 23px;
+    width: 111px;
+    background-image: url("../front/tou2.jpg");
+    background-position: 5px -25px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    font-size: 12px;
+    line-height: 26px;
+}
+.sign-box {
+    width: 248px;
+    height: 112px;
+    position: absolute;
+    bottom: 62px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 1px solid #e6e6e6;
+    color: #333;
+    display: none;
+}
+.sign-box img {
+    float: left;
+    margin-left: 20px;
+    margin-top: 13px;
+    margin-right: 14px;
+}
+.sign-box h2 {
+    margin-top: 37px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.sign-box span {
+    font-size: 12px;
+    color: #999;
+    line-height: 22px;
+}
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #ffffff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    left: 35px;
+    bottom: -8px;
+}
+.triangle2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 12px solid rgba(0,0,0,0.1);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    left: 32px;
+    bottom: -12px;
+}
+.sign:hover .sign-box {
+    display: block;
+}
+
+/* 媒体查询部分 当屏幕尺寸大于了1500px的时候执行下面的样式 */
+@media screen and (min-width: 1500px) {
+    /* min-width 表示屏幕最小是1500的时候，也就是大于1500的时候执行 */
+}
+/* 媒体查询部分 当屏幕尺寸小于了1500px的时候执行下面的样式 */
+@media screen and (min-width: 1500px) {
+    /* 不写了 */
+}
+
+.footer {
+    height: 100px;
+    background: #454545;
+}
+.footer-logo img {
+    margin: 25px 0;
+}

@@ -1,0 +1,12 @@
+<wxs src="./index.wxs" module="m"></wxs>
+<view>{{m.getDay(day)}}</view>
+<view>{{m.timeFormat(time)}}</view>
+<view>{{time}}</view>
+<view class="outer" hover-class="outer-hover" hover-start-time="0" hover-stay-time="0"></view>
+<movable-area class="outer">
+<movable-view class="inner" direction="all"></movable-view>
+</movable-area>
+<icon type="info" size="50"></icon>
+<text selectable='true' decode>Hello &gt;        World</text>
+<progress percent="45" show-info="true" border-radius='20px' font-size="10px" stroke-width="20" activeColor="red" active></progress>
+<button loading bindtap="onBtnClick">按钮</button>

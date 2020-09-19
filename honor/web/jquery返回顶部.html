@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1285944_ow8isg61q4e.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        {# 设置body标签样式是为了让网页在没有实际内容的情况下也有高度，方便滚动条测试 #}
+        body {
+            height: 2000px;
+        }
+        .sidebar {
+            position: fixed;
+            left: 50%;
+            margin-left: 500px;
+            bottom: 50px;
+        }
+        .sidebar .top {
+            display: none;
+            width: 60px;
+            height: 80px;
+            border: 1px solid #e5e5e5;
+            font-size: 35px;
+            text-align: center;
+            line-height: 80px;
+            color: #444;
+            text-decoration: none;
+        }
+        .sidebar .top:hover {
+            background: skyblue;
+            font-size: 40px;
+            color: #fff;
+            border: 1px solid skyblue;
+            border-radius: 5px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="sidebar">
+        <a class="top iconfont icon-top" href="javascript: void(0);"></a>
+    </div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    jQuery(function () {
+        var $top = $('.top');
+        $(window).scroll(function () {
+            var nowTop = $(this).scrollTop(); {# scrollTop()方法是获取滚动条的位置，滚动条在顶部的时候位置为0 #}
+            if (nowTop > 0) {
+                $top.css('display', 'block');
+            } else {
+                $top.css('display', 'none');
+            }
+        });
+        {# 当鼠标点击的时候用0.4秒的时间在不刷新页面的情况下滑动到页面顶部位置 #}
+        $top.on('click', function () {
+            $('body, html').stop().animate({
+                scrollTop: 0
+            },400);
+        })
+    });
+
+</script>
+</body>
+</html>

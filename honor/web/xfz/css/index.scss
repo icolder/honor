@@ -1,0 +1,33 @@
+@import "init.scss";
+@import "constant.scss";
+
+body {
+  background: #ccc;
+}
+
+.header {
+  width: 100%;
+  height: 66px;
+  background: #2d2d2d;
+  .constant {
+    width: $pageWidth;
+    height: 100%;
+    background: gray;
+    margin: 0 auto;
+  }
+  .load-more-group {
+    margin: 20px 0;
+    text-align: center;
+    .load-more {
+      height: 40px;
+      width: 300px;
+      background-color: gray;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: rgb(211, 100, 100);
+      
+    }
+
+  }
+}

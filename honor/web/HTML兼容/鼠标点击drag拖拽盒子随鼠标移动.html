@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    var box = document.getElementById("box")
+    box.onmousedown = function(e) {
+      e = e || event;
+      var initX = e.clientX;
+      var initY = e.clientY;
+      var initLeft = box.offsetLeft;
+      var initTop = box.offsetTop;
+
+      document.onmousemove = function(e) {
+        e = e || event;
+        var moveX = e.clientX;
+        var moveY = e.clientY;
+        var changeX = moveX - initX;
+        var changeY = moveY - initY;
+        window.console.log(moveX)
+
+        box.style.left = changeX + initLeft + "px";
+        box.style.top = changeY + initTop + "px";
+      }
+    }
+    document.onmouseup = function () {
+      document.onmousemove = function () {};
+    }
+  </script>
+</body>
+</html>

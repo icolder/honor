@@ -1,0 +1,71 @@
+body{
+    background: pink;
+    margin: 0;
+    padding: 0;
+}
+.page-control {
+    width: 500px;
+    height: 260px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    .banner-group {
+        list-style: none;
+        width: 500px * 4;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 0;
+        padding-left: 0;
+        left: 0;
+        li {
+            float: left;
+            img {
+                width: 500px;
+                height: 260px;
+            }
+        }
+    }
+    .arrow {
+        display: none;
+        position: absolute;
+        font-size: 40px;
+        font-family: serif;
+        font-weight: 900;
+        color: #fff;
+        top: 50%;
+        margin-top: -35px;
+        cursor: pointer;
+    }
+    .left-arrow {
+        left: 30px;
+    }
+    .right-arrow {
+        right: 30px;
+    }
+    .circle {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        .circle-ul {
+            margin: 0 auto;
+            list-style: none;
+            overflow: hidden;
+            width: 8px * 2 * 4 + 12px * 4;
+            li {
+                float: left;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #fff;
+                box-sizing: border-box;
+                border-radius: 50%;
+                margin: 0 8px;
+                cursor: pointer;
+
+                &.active {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

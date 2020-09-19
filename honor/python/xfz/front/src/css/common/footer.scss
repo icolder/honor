@@ -1,0 +1,125 @@
+@import "constants.scss";
+
+.footer {
+  font-size: 14px;
+  color: #c9c9c9;
+  margin-top: 10px;
+  .top-group {
+    background: #555e67;
+    height: 100px;
+    padding-top: 22px;
+    box-sizing: border-box;
+
+    .top-inner-group {
+      width: 1170px;
+      margin: 0 auto;
+      //overflow: hidden;
+      position: relative;
+
+      .logo-box {
+        width: 168px;
+        height: 54px;
+        background-image: url("../../images/logo-test.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        float: left;
+
+      }
+
+      .detail-group {
+        float: left;
+        margin-left: 84px;
+
+        .line1 {
+          overflow: hidden;
+          .links {
+            overflow: hidden;
+            list-style: none;
+            float: left;
+            li {
+              float: left;
+              padding: 0 12px;
+              border-right: 1px solid #c9c9c9;
+              &:first-child {
+                padding-left: 0;
+              }
+              &:last-child {
+                border-right: none;
+              }
+
+              a {
+                text-decoration: none;
+                color: #c9c9c9;
+              }
+            }
+          }
+          .about-us {
+            float: left;
+            padding-left: 40px;
+            overflow: hidden;
+            span {
+              float: left;
+            }
+
+            .social-group {
+              overflow: hidden;
+              list-style: none;
+              float: left;
+              li {
+                float: left;
+                color: #fff;
+              }
+              .weixin {
+                background-image: url("../../images/wx-icon.png");
+                background-repeat: no-repeat;
+                background-size: 18%;
+                cursor: pointer;
+                &:hover .wx-qrcode {
+                  display: block;
+                }
+                span {
+                  margin-left: 28px;
+                }
+                .wx-qrcode {
+                  display: none;
+                  width: 204px;
+                  height: 204px;
+                  background-image: url("../../images/xfz-wechat-share.png");
+                  background-size: 100%;
+                  position: absolute;
+                  left: 650px;
+                  bottom: 6px;
+                }
+              }
+              .weibo {
+                margin-left: 20px;
+                a {
+                  text-decoration: none;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
+        .line2 {
+          overflow: hidden;
+          padding-top: 15px;
+          .address {
+            float: left;
+          }
+          .contact {
+            float: left;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-group {
+    background: #383e44;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+  }
+}

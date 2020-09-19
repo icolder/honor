@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <style>
+    .inp::-webkit-input-placeholder{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <input id="inp" type="text" placeholder="请输入关键字" onfocus="inpClick" onblur="this.placeholder='请输入关键字'" id="">
+ 
+  <script>
+    $(function(){
+      var inp = $("#inp");
+      inp.on('keyup',function(e){
+        if(e.keyCode == 13){
+          inp.addClass("inp")
+        }
+      })
+    })
+  </script>
+</body>
+</html>

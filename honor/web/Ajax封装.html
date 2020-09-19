@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AjaxGet方法</title>
+</head>
+<body>
+  <div class="box">
+    <ul id="list"></ul>
+  </div>
+  <script>
+    var uls = document.getElementById("list");
+    ajax({
+      type: 'get',
+      url: "/data",
+      data: {},
+      success: function (data) {
+        var data = JSON.parse(data)
+        uls.innerHTML = ""
+
+        for(var key in data){
+          var li = document.createElement("li")
+          li.innerHTML = key + "=====" + data[key]
+          uls.appendChild(li)
+        }
+      },
+      error: function (code,xhr) {
+        window.console.log(code)
+      }
+    })
+
+    function ajax(obj) {
+      var type = obj.rype;
+      var url = obj.url;
+      var data = obj.data;
+      var success = obj.success;
+      var error = obj.error;
+      var send_data = "";
+
+      for(var key in data){
+        send_data += key + "=" + data[key] + "&"
+      }
+      send_data += "_=" + new Date().getTime();
+      var xhr = new XMLHttpRequest();
+      type.toLowerCase()=="get"?xhr.open(type, url+"?"+send_data, true):xhr.open(type, url, true);
+      xhr.setRequestHeader('ContentType','application/x-www-form-urlencoded');
+      xhr.send(send_data);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) (xhr.status>=200 && xhr.status<300)?success && success(xhr.responseText): error && error(xhr.status,xhr)
+      }
+    }
+  </script>
+</body>
+</html>

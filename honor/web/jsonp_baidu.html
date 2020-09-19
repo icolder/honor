@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jsonp</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+    }
+    .wrap {
+      width: 500px;
+      margin: 50px auto 0;
+    }
+    #inp {
+      width: 500px;
+      height: 45px;
+      border: 1px solid #e5e5e5;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      font-size: 20px;
+    }
+    li {
+      list-style: none;
+    }
+    li:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .list li a {
+      text-decoration: none;
+      display: block;
+      width: 500px;
+      border: 1px solid #e5e5e5;
+      border-top: 0;
+      border-bottom: 0;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      color: black;
+    }
+    li a:hover {
+      background: skyblue;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+      <input type="text" id="inp">
+      <ul class="list"></ul>
+  </div>
+
+  <script>
+    var inp = document.getElementById("inp");
+    var list = document.getElementsByClassName("list")[0];
+    inp.onkeyup = function () {
+      var val = this.value;
+      var jsonp = document.createElement("script")
+      jsonp.src = "https://www.baidu.com/sugrec?prod=pc&wd=" + val +"&cb=colder"
+      document.body.appendChild(jsonp);
+      document.body.removeChild(jsonp);
+    }
+
+    function colder(obj) {
+      list.innerHTML = "";
+      if (obj.g) {
+        for(var i=0;i<obj.g.length;i++){
+          var li = document.createElement("li")
+          var lia = document.createElement("a")
+          lia.target = "_blank"
+          lia.href = "https://www.baidu.com/s?wd="+ obj.g[i].q;
+          lia.innerHTML = obj.g[i].q
+          li.appendChild(lia)
+          list.appendChild(li)
+          // list.innerHTML += '<li><a target="_blank" href="https://www.baidu.com/s?wd='+ obj.g[i].q +'">' + obj.g[i].q + '</a></li>'
+          lia.onclick = function () {
+            inp.value = "";
+            list.innerHTML = "";
+          } 
+        }
+      }
+    } 
+  </script>
+</body>
+</html>

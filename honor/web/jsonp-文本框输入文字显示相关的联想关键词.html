@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP-联想关键词</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        #wrap {
+            width: 500px;
+            margin: 100px auto 0;
+        }
+        #search {
+            border: 1px solid #e5e5e5;
+            width: 478px;
+            height: 38px;
+            padding: 5px 10px;
+            font-size: 20px;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        #list {
+            border: 1px solid #e5e5e5;
+            border-top: none;
+            border-bottom: none;
+        }
+        #list li a {
+            font-size: 16px;
+            display: block;
+            width: 478px;
+            padding: 5px 10px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        #list li a:hover {
+            background: rgb(51, 153, 255);
+            color: #fff;
+        }
+        #list li:last-child {
+            border-bottom: 1px solid #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+        <input id="search" type="text">
+        <ul id="list">
+{# 此处为开始设置下拉列表框呈现效果的测试用途 #}
+{#            <li><a href="javascript: void(0);">111</a></li>#}
+{#            <li><a href="javascript: void(0);">111</a></li>#}
+{#            <li><a href="javascript: void(0);">111</a></li>#}
+        </ul>
+    </div>
+
+    <script>
+
+        var search = document.getElementById("search");
+        var list = document.getElementById("list");
+        search.onkeyup = function () {
+            var value = this.value;
+            {# 淘宝网的联想关键词url #}
+            {# https://suggest.taobao.com/sug?code=utf-8&q=%E8%BD%AE%E6%BB%91%E9%9E%8B&callback=colder #}
+            var jsonp = document.createElement("script");
+            jsonp.src = "https://suggest.taobao.com/sug?code=utf-8&q="+ value +"&callback=colder";
+            document.body.appendChild(jsonp);
+        };
+
+        function colder(obj) {
+            list.innerHTML = "";
+            for (var i=0; i<obj.result.length; i++) {
+                list.innerHTML += "<li><a draggable='false' target='_blank' href='https://s.taobao.com/search?q="+ obj.result[i][0] +"'>"+ obj.result[i][0]+"</a></li>";
+                list.onclick = function () {
+                    list.innerHTML = "";
+                    search.value = "";
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

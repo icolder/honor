@@ -1,0 +1,51 @@
+.item-group {
+  width: 1240px;
+}
+
+/* 采用flex给ul设置布局样式的时候，flex-direction.flex-wrap.justify-content等都有在ul标签里进行设置 */
+.video-content {
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.video-info {
+  float: left;
+  width: 300px;
+  height: 360px;
+  background: pink;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+.info-img img {
+  width: 100%;
+}
+.info-content .title {
+  color: #000;
+}
+.info-content .author {
+  color: #888;
+}
+.info-content {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.info-content .free {
+  bottom: 20px;
+  position: absolute;
+  right: 20px;
+}
+.video-info a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: skyblue;
+}
+.video-info:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}

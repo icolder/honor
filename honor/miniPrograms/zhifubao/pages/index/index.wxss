@@ -1,0 +1,41 @@
+.top-wrapper{
+  display: flex;
+}
+.wrapper{
+  flex: 1;
+}
+.right{
+  flex-basis: 50rpx;
+  height: 50rpx;
+  background-color: skyblue;
+}
+.wrapper .inp{
+  height: 50rpx;
+  background-color: #ccc;
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  color: #fff;
+  /* border: 2px solid #e4e4e4; */
+}
+
+.wrapper .inner{
+  color: #fff;
+}
+
+map{
+  width: 500rpx;
+  height: 400rpx;
+}
+.outer{
+  width: 200px;
+  height: 500px;
+  background-color: pink;
+}
+.outer-hover{
+  background-color: skyblue;
+}
+.inner{
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery吸顶效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            vertical-align: baseline;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        i {
+            font-style: normal;
+        }
+        body {
+            height: 3000px;
+        }
+        .nav {
+            height: 40px;
+            width: 100%;
+            background: #f10180;
+        }
+        .list {
+            width: 1000px;
+            height: 40px;
+            margin: 0 auto;
+        }
+        .list li {
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+
+        }
+        .list li a {
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            padding: 0 14px;
+        }
+        .list li:last-child a {
+            padding: 0 16px;
+
+        }
+        .list a:hover {
+            background: #db0a76;
+        }
+        .triangle {
+            display: block;
+            height: 0;
+            width: 0;
+            border-top: 4px solid #fff;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            position: absolute;
+            top: 20px;
+            right: 3px;
+        }
+        .more:hover .triangle {
+            border-top: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid #fff;
+            top: 19px;
+            right: 3px;
+        }
+        .list li:last-child:hover .box {
+            display: block;
+        }
+        .box {
+            display: none;
+            width: 300px;
+            height: 200px;
+            background-color: skyblue;
+            box-shadow: 0 0 10px #fff inset;
+            position: absolute;
+            top: 40px;
+            right: 0;
+        }
+        .box2 {
+            width: 100%;
+            height: 100px;
+            background-color: pink;
+        }
+        .box3 {
+            display: none;
+            width: 100%;
+            height: 40px;
+            background: white;
+        }
+        .box4 {
+            width: 100%;
+            height: 500px;
+            background: orange;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box2"></div>
+    <div class="nav">
+        <ul class="list">
+            <li><a href="javascript: void(0);">首页</a></li>
+            <li><a href="javascript: void(0);">女装</a></li>
+            <li><a href="javascript: void(0);">母婴</a></li>
+            <li><a href="javascript: void(0);">美妆</a></li>
+            <li><a href="javascript: void(0);">国际</a></li>
+            <li><a href="javascript: void(0);">男士</a></li>
+            <li><a href="javascript: void(0);">居家</a></li>
+            <li><a href="javascript: void(0);">鞋包</a></li>
+            <li><a href="javascript: void(0);">运动</a></li>
+            <li><a href="javascript: void(0);">生活</a></li>
+            <li>
+                <a class="more" href="javascript: void(0);">更多
+                    <i class="triangle"></i>
+                </a>
+                <div class="box"></div> {# 点击更多之后出现的弹窗 #}
+            </li>
+        </ul>
+    </div>
+    <div class="box3"></div>
+    <div class="box4">测试内容</div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+        jQuery(function () {
+            var $nav = $('.nav');
+            var $box3 = $('.box3');
+            $(window).on('scroll', function () {
+                var nowTop = $(window).scrollTop();
+                if (nowTop >= 100) {
+                    $box3.css({display: 'block'});
+                    $nav.css({
+                        position: 'fixed',
+                        top: 0
+                    });
+                } else {
+                    $box3.css({display: 'none'});
+                    $nav.css({
+                        position: 'static',
+                        top: nowTop
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
